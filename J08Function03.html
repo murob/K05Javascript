@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J08Function03.html</title>
+    <script>
+      var param = 100,
+        args = 1;
+
+      document.write("<h2>Call by value</h2>");
+      document.write("초기값 param=" + param + ", args=" + args + "<br/>");
+
+      function callByValue(param, args) {
+        var temp = param;
+        param = args;
+        args = temp;
+        document.write("함수안의 param=" + param + ", args=" + args + "<br/>");
+      }
+      callByValue(param, args);
+      document.write("함수밖의 param=" + param + ", args=" + args + "<br/>");
+
+      /*
+      참조에 의한 호출. 값이 아닌 객체의 
+      */
+      document.write("<h2>Call by Reference</h2>");
+      var array = [100, 1];
+      document.write(
+        "초기값 array[0]=" + array[0] + ", array[1]=" + array[1] + "<br/>"
+      );
+
+      /*
+      배열의 참조값을 통해 값이 교환되므로, 실제 배열에 값이 적용된다.
+      */
+      function callByReference(arr) {
+        var temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+        document.write(
+          "함수안의 =" + array[0] + ", array[1]=" + array[1] + "<br/>"
+        );
+      }
+
+      callByReference(array);
+      document.write(
+        "함수밖의 =" + array[0] + ", array[1]=" + array[1] + "<br/>"
+      );
+
+      document.write("<h2>배열을 크기순으로 정렬하기</h2>");
+      /*
+        연습문제] 다음 배열을 오름차순으로 정렬하는 함수를 정의하시오. 단, 
+        정렬전과 정렬후의 결과를 모두 출력해야 한다. 
+        */
+      var arr = [10, 45, 99, 1, 34, 78, 100, 22, 2, 55];
+
+      function setOrdering(arrParam) {
+        for (var a = 0; a < arrParam.length; a++) {
+          for (var b = 0; b < arrParam.length; b++) {
+            if (arrParam[b] > arrParam[b + 1]) {
+              var temp = arrParam[b];
+              arrParam[b] = arrParam[b + 1];
+              arrParam[b + 1] = temp;
+            }
+          }
+        }
+      }
+      function showArray(arrParam) {
+        //배열의 크기만큼 반복하면서 요소 출력
+        for (var i = 0; i < arrParam.length; i++) {
+          document.write(arrParam[i] + "&nbsp;");
+        }
+        document.write("<br/>");
+      }
+      //정렬전 배열 출력
+      showArray(arr);
+      //정렬 실행(오름차순)
+      setOrdering(arr);
+      //정렬후 배열 출력
+      showArray(arr);
+    </script>
+  </head>
+  <body></body>
+</html>
