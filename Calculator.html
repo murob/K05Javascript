@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator.html</title>
+    <style>
+      table {
+        width: 425px;
+        height: 368px;
+        background-color: #dddddd;
+        border-radius: 10px;
+      }
+      th {
+        border-radius: 10px;
+      }
+      .result {
+        background-color: #70c738;
+        font-size: 2.5em;
+        text-align: right;
+        padding-right: 10px;
+      }
+      .back_space,
+      .C {
+        width: 50%;
+        font-size: 1.5em;
+      }
+      .gray {
+        background-color: #7b7b7b;
+        color: white;
+      }
+      .black {
+        background-color: #373737;
+        color: white;
+      }
+      .orange {
+        background-color: #fa960a;
+        color: white;
+      }
+      .button_width {
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" cellspacing="5">
+      <tr>
+        <th class="result" rowspan="2" colspan="4">123+654</th>
+      </tr>
+      <tr></tr>
+      <tr>
+        <th class="back_space gray" colspan="2">
+          <input
+            type="button"
+            value="BackSpace"
+            style="background-color: #7b7b7b; color: white"
+          />
+        </th>
+        <th class="C gray" colspan="2">
+          <input
+            type="button"
+            value="C"
+            style="background-color: #7b7b7b; color: white"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th class="black button_width">
+          <input
+            type="button"
+            value="1"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black button_width">
+          <input
+            type="button"
+            value="2"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black button_width">
+          <input
+            type="button"
+            value="3"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="orange button_width">
+          <input
+            type="button"
+            value="/"
+            style="background-color: #fa960a; color: white"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th class="black">
+          <input
+            type="button"
+            value="4"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black">
+          <input
+            type="button"
+            value="5"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black">
+          <input
+            type="button"
+            value="6"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="orange">
+          <input
+            type="button"
+            value="x"
+            style="background-color: #fa960a; color: white"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th class="black">
+          <input
+            type="button"
+            value="7"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black">
+          <input
+            type="button"
+            value="8"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black">
+          <input
+            type="button"
+            value="9"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="orange">
+          <input
+            type="button"
+            value="+"
+            style="background-color: #fa960a; color: white"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th class="black">
+          <input
+            type="button"
+            value="="
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black">
+          <input
+            type="button"
+            value="0"
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="black">
+          <input
+            type="button"
+            value="."
+            style="background-color: #373737; color: white"
+          />
+        </th>
+        <th class="orange">
+          <input
+            type="button"
+            value="4"
+            style="background-color: #fa960a; color: white"
+          />
+        </th>
+      </tr>
+    </table>
+  </body>
+</html>
